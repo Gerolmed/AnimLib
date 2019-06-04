@@ -1,0 +1,6 @@
+name: AnimLib
+version: ${project.version}
+main: de.gerolmed.animlib.AnimLib
+prefix: AnimLib
+authors: [Gerolmed]
+description: Offers a rich api to animate inventories
