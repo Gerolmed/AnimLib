@@ -1,9 +1,9 @@
 package de.gerolmed.animlib.api.impl;
 
-import de.gerolmed.animlib.api.ModificationPriority;
 import de.gerolmed.animlib.api.PriorityComparator;
 import de.gerolmed.animlib.api.interfaces.IComponent;
 import de.gerolmed.animlib.api.interfaces.IModifier;
+import de.gerolmed.animlib.api.interfaces.ITickable;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
@@ -55,6 +55,13 @@ public class BasicComponent implements IComponent {
     public void tick() {
         if(!running)
             return;
-        modifiers.forEach(e->itemStack = e.modify(itemStack));
+
+        modifiers.forEach(modifier->{
+
+            if(modifier instanceof ITickable)
+                ((ITickable) modifier).tick();
+
+            itemStack = modifier.modify(itemStack);
+        });
     }
 }

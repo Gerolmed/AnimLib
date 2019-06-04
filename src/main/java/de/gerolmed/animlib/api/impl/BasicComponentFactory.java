@@ -15,6 +15,6 @@ public class BasicComponentFactory implements ComponentFactory {
 
     @Override
     public IComponent createSimpleComponent(ItemStack itemStack) {
-        return null;
+        return new BasicComponent(itemStack);
     }
 }
