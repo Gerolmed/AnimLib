@@ -30,14 +30,4 @@ public interface IComponent extends ITickable {
      * this component
      */
     ItemStack getDisplay();
-
-    /**
-     * Stops animating the component
-     */
-    void stop();
-
-    /**
-     * Starts/Resumes animating the component
-     */
-    void start();
 }

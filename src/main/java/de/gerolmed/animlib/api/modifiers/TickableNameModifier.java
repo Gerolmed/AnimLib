@@ -44,7 +44,7 @@ public class TickableNameModifier extends TickableModifier {
         this.ticksPerStep = ticksPerStep;
         this.priority = priority;
 
-        iterator = this.nameTags.entrySet().iterator();
+        this.iterator = this.nameTags.entrySet().iterator();
     }
 
     @Override

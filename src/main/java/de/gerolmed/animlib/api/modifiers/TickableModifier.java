@@ -6,6 +6,7 @@ import de.gerolmed.animlib.api.interfaces.ITickable;
 public abstract class TickableModifier implements IModifier, ITickable {
 
     private int currentTicks;
+    private boolean running = true;
 
     @Override
     public void tick() {
@@ -21,4 +22,14 @@ public abstract class TickableModifier implements IModifier, ITickable {
      * @return the ticks until the the next proceed
      */
     protected abstract int proceed();
+
+    @Override
+    public void stop() {
+        this.running = false;
+    }
+
+    @Override
+    public void start() {
+        this.running = true;
+    }
 }

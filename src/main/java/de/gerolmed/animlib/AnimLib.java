@@ -8,6 +8,16 @@ public final class AnimLib extends JavaPlugin {
 
     private Logger LOGGER;
 
+    private static AnimLib INSTANCE;
+
+    public static AnimLib getInstance() {
+        return INSTANCE;
+    }
+
+    public AnimLib() {
+        INSTANCE = this;
+    }
+
     @Override
     public void onEnable() {
 
