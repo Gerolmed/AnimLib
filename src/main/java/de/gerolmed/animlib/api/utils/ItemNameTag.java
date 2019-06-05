@@ -1,9 +1,9 @@
 package de.gerolmed.animlib.api.utils;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 public class ItemNameTag {
     private String name;
