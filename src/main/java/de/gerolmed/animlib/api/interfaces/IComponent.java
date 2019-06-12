@@ -4,6 +4,9 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.List;
 
+/**
+ * Defines how an animated component interacts with its environment
+ */
 public interface IComponent extends ITickable {
 
     /**
